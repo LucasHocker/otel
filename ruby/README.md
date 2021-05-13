@@ -32,3 +32,10 @@
     - `401` - your API key is likely incorrect or missing the `Ingest OpenTelemetry traces` scope
 - Finally, if you are **seeing status `200`** but still not seeing spans, be sure you have a OneAgent instrumented service in front of your OpenTelemetry instrumented app.
     Currently, we do not support ingest of root traces, only extending PurePaths.
+
+## References
+- [OpenTelemetry-Ruby](https://github.com/open-telemetry/opentelemetry-ruby)
+- [Instrumentation-All](https://github.com/open-telemetry/opentelemetry-ruby/tree/main/instrumentation/all)
+- [OTLP](https://github.com/open-telemetry/opentelemetry-ruby/tree/main/exporter/otlp)
+- [Environment_Vars](https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/protocol/exporter.md)
+- [Dynatrace_Help](https://www.dynatrace.com/support/help/shortlink/opentelemetry)
