@@ -1,0 +1,12 @@
+# DT Otel
+COPY otel.rb /usr/src/redmine/lib/redmine/core_ext/
+RUN cd /usr/src/redmine/; \
+	echo >> Gemfile; \
+	echo "gem 'opentelemetry-sdk'" >> Gemfile; \
+	echo "gem 'opentelemetry-exporter-otlp'" >> Gemfile; \
+	echo "gem 'opentelemetry-instrumentation-all'" >> Gemfile; \
+	bundle install --full-index
+# Currently added to otel.rb instead
+#ENV OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=https://XXXXXXXX.sprint.dynatracelabs.com:443/api/v2/otlp
+#ENV OTEL_EXPORTER_OTLP_HEADERS=Authorization=Api-Token dt0c01.XXXXXXXXXXXXXXXXX
+
